@@ -29,6 +29,7 @@ dependencies {
 }
 
 tasks.register('dev-build') {
+    dependsOn build
     doLast {
         exec {
             commandLine 'git', 'add', '.'
