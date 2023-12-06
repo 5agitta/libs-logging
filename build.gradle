@@ -29,7 +29,7 @@ dependencies {
 }
 
 tasks.register('dev-build') {
-    dependsOn clean, build
+    dependsOn build, clean
     doLast {
         exec {
             commandLine 'git', 'add', '.'
