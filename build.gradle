@@ -32,15 +32,12 @@ tasks.register('dev-build') {
     doLast {
         exec {
             commandLine 'git', 'add', '.'
-            standardOutput = System.out
         }
         exec {
             commandLine 'git', 'commit', '-m', "Added patches"
-            standardOutput = System.out
         }
         exec {
             commandLine 'git', 'push', 'origin', 'HEAD'
-            standardOutput = System.out
         }
     }
 }
