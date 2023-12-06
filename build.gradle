@@ -29,6 +29,7 @@ dependencies {
 }
 
 tasks.register('dev-build') {
+    dependsOn clean
     dependsOn build
     doLast {
         exec {
