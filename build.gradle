@@ -33,8 +33,12 @@ tasks.register('dev-build') {
         exec {
             commandLine 'git', 'add', '.'
         }
-        exec {
-            commandLine 'git', 'commit', '-m', "Added patches"
+        try {
+            exec {
+                commandLine 'git', 'commit', '-m', "Added patches"
+            }
+        } catch (ignored) {
+            println "No changes to commit"
         }
         exec {
             commandLine 'git', 'push', 'origin', 'HEAD'
